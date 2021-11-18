@@ -1,0 +1,12 @@
+//JSON, you will find them commonly in web development such as in API's,Web Servers etc.
+
+//JSON has .json extension, looks similar to javascript object but aren't the same.
+
+{
+    "customerId": "1235029132",
+    "expDate": "11/12/2022",
+    "customerPhoto" :'https://loremflickr.com/320/240?random=1'
+}
+
+
+
