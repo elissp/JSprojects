@@ -1,0 +1,487 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --primary-color: #243473;
+    --primary-darker: #293b83;
+    --details-font-color: #61F8D4;
+    --primary-font-color: rgb(216, 216, 216);
+    --secondary-font-color: rgba(204, 214, 246, 0.822);
+}
+
+/* General Styling */
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    counter-reset: section;
+}
+main {
+    padding: 0 150px;
+}
+
+header {
+    padding: 0 50px;
+}
+section {
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+p {
+    line-height:  1.7;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the Disclosure ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* style the Disclosure */
+div#disclosure {
+    background-color: #0a1438;
+    padding: 20px 50px;
+    width: 100wh;
+}
+
+.ripoff-link {
+    color: var(--details-font-color);
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the SOCIAL SIDEBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+div.social {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+}
+
+div.social ul {
+    list-style-type: none;
+}
+
+div.social ul li {
+    margin-top: 20px;
+}
+
+div.social #social-line {
+    position: relative;
+    height: 80px;
+}
+div.social #social-line::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    background-color: var(--secondary-font-color);
+    bottom: 0;
+    left: 50%;
+
+
+}
+
+div.social i.fab {
+    font-size: 3rem;
+    color: var(--secondary-font-color);
+    transition: transform 0.4s;
+}
+
+div.social i.fab:hover {
+    color: var(--details-font-color);
+    transform: rotate(20deg);
+
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the Navbar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+}
+
+ul.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    width: 40%;
+}
+
+/* ul.nav-links li{
+    text-decoration: none;
+} */
+
+ul.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 0 0 10px;
+    /* new */
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    transform-origin: right;
+}
+ul.nav-links li a:hover {
+    color: var(--details-font-color);
+}
+
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the HERO SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.hero {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+
+}
+
+
+.hero .back-image {
+    position: relative;
+
+}
+.hero .back-image::before  {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imgs/Untitled\ design.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 45%;
+    z-index: -1;
+}
+
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: px;
+    font-weight: 900px;
+}
+.hero h1 + h1 {
+    color: var(--secondary-font-color);
+}
+
+.hero h4 {
+    color: var(--details-font-color);
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 500px;
+    margin: 30px 0 30px 0;
+}
+
+.hero div {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+   text-decoration: none;
+   color: var(--details-font-color);
+   border: 1px solid var(--details-font-color);
+   border-radius: 5px;
+   padding: 1.8rem 3rem;
+   transition: all 0.2s ease-in-out;
+   position: relative;
+   background-color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-darker);
+    padding: 1.6rem 2.8rem;
+    margin: 0.2rem;
+
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the PROJECT SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* style the numbered intro  */
+
+.numbered-heading {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.numbered-heading::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--details-font-color);
+}
+.numbered-heading::after {
+    counter-increment: section;
+    content: ".0" counter(section);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    font-size: 1.3rem;
+}
+/* style the cards */
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr auto 50px;
+    grid-template-columns: repeat(2, 1fr);
+
+    background-color: var(--primary-darker);
+    border-radius: 5px;
+    padding: 10px;
+    height: auto;
+}
+.card div {
+    grid-column: 1/3;
+}
+.card P {
+    grid-column: 1/3;
+}
+.card div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-btn {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin: auto 0;
+    left: 0;
+    text-decoration: none;
+    color:var(--details-font-color);
+    border: 1px solid var(--details-font-color);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+}
+.project-btn:hover {
+    border: none;
+    font-size: 2rem;
+
+}
+.card img, p {
+    margin-bottom: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the WHATS NEXT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.call-to-action {
+    background-color: var(--primary-darker);
+    padding: 20px;
+    border-radius: 5px;
+    height: auto;
+    position: relative;
+}
+
+.call-to-action::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -10px;
+    border: 1px solid #61f8d523;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the ABOUT WEBPAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+section#about {
+    height: 90vh;
+    padding-top: 100px;
+    
+}
+
+section#about .about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#my-image {
+    background-image: url("../imgs/my-image.jpg");
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    border: 5px;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    margin: 15px;
+
+}
+
+#my-image::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--details-font-color);
+    top: -10px;
+    right: -10px;
+    z-index: -1;
+    border-radius: 5px;
+}
+#my-image::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--details-font-color);
+    top: -20px;
+    right: -20px;
+    z-index: -2;
+    border-radius: 5px;
+
+}
+
+section#about .about-wrapper p {
+    text-align: justify;
+    width: 600px;
+    position: relative;
+}
+
+
+.call-to-action-about-us {
+    margin: 50px 0;
+    font-size: 2.5rem;
+    
+}
+
+.call-to-action-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.call-to-action-about-us img {
+    width: 70px;
+    height: 70px;
+    padding-right: 10px;
+}
+.call-to-action-about-us a {
+    text-decoration: none;
+    color: var(--primary-font-color);
+}
+
+.call-to-action-about-us a:hover {
+    color: var(--details-font-color);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the CONTACT WEBPAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+section#contact {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#contact form {
+    width: 600px;
+    background-color: #949AAC;
+    padding: 30px;
+    border-radius: 5px;
+    border: 8px solid #7284A7;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* section#contact form::before {
+    content: "contact";
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 2rem;
+    color: var(--primary-font-color);
+    left: -70px;
+    top: 0;
+} */
+
+section#contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+section#contact form input {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-darker);
+    border: none;
+    outline: none;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--details-font-color);
+    color: white;
+    margin-bottom: 25px;
+}
+
+
+section#contact form .btn-form {
+    background-color: var(--details-font-color);
+    border: none;
+    outline: none;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
