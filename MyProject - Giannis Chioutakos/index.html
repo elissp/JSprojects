@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="disclosure">
+        <span>I tried to "immitate" this style by <a href="https://brittanychiang.com/" class="ripoff-link">Britney Chiang</a>.</span>
+    </div>
+    <div class="social">
+        <ul>
+            <li>
+                <a onclick="openGithub();" href="#"><i class="fab fa-github-square"></i></a>
+            </li>
+            <li>
+                <a  onclick="openInstagram();" href="#"><i class="fab fa-instagram-square"></i></a>
+            </li>
+            <li>
+                <a onclick="openFacebook();" href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li id="social-line"></li>
+        </ul>
+    </div>
+    <Header class="nav-section">
+        <nav>
+            <div class="logo">
+                <span>JavaFlex Web</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a onclick="openHome();" href="#">.Home()</a>
+                </li>
+                <li>
+                    <a onclick="openAbout();" href="#">.About Us()</a>
+                </li>
+                <li>
+                    <a onclick="openContact();" href="#">.Contact()</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="back-image">
+                <h4>Hi, my name is</h4>
+                <h1>John Chioutakos.</h1>
+                <h1>I build things for the web.</h1>
+                <p>I' am Javascript Developer focused on building Web Applications and Responsive Websites. <span
+                class="more-info">Click here for more info</span>
+                </p>
+            </div>
+            <div>
+                <a class="btn" href="">Hire me!</a>
+            </div>
+        </section>
+        <section class="projects">
+            <h1 class="numbered-heading">Check Out My Projects</h1>
+            <div class="projects-grid">
+                <div class="card card-1">
+                    <div>
+                        <img src="imgs/3.png" alt="">
+                        <h1 class="card-title">Something Project</h1>
+                    </div>
+                    <p class="card-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, odio!</p>
+                    <a class="project-btn" href="#">Project Link</a>
+                </div>
+                <div class="card card-3">
+                    <div>
+                        <img src="imgs/2.png" alt="">
+                        <h1 class="card-title">Something Project</h1>
+                    </div>
+                    <p class="card-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, odio! lorem10 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, esse?</p>
+                    <a class="project-btn" href="#">Project Link</a>
+                </div>
+                
+                <div class="card card-4">
+                    <div>
+                        <img src="imgs/4.jpeg" alt="">
+                        <h1 class="card-title">Something Project</h1>
+                    </div>
+                    <p class="card-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, odio! lorem10</p>
+                    <a class="project-btn" href="#">Project Link</a>
+                </div>
+                
+                <div class="card card-2">
+                    <div>
+                        <img src="imgs/5.jpg" alt="">
+                        <h1 class="card-title">Something Project</h1>
+                    </div>
+                    <p class="card-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, odio! lorem10</p>
+                    <a class="project-btn" href="#">Project Link</a>
+                </div>
+            </div>
+        </section>
+        <section id="whats-next">
+
+            <h1 class="numbered-heading">what's next</h1>
+            <div class="call-to-action">
+                <p>I am currently open to take up a few projects. If you have anything in mind do not hesitate to contact me!</p>
+                <a class="btn" href="">Say Hello!</a>
+            </div>
+        </section>
+        <section>
+            <div class="footer">
+                <p>designed and build by @NearlyNormalJimmy, mostly</p>
+            </div>
+
+        </section>     
+    </main>
+    <!-- scripts -->
+    <script src="main.js"></script>
+</body>
+</html>
+
+        
+            
+            
+
+            
+            
+        
+        
+        
+    
+    

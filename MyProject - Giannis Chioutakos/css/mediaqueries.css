@@ -1,0 +1,53 @@
+/* media queries */
+
+/* style for TABLET */
+@media screen and (max-width: 1024px) {
+    ul.nav-links {
+        display: none;
+    }
+
+    div.social {
+        display:none;
+    }
+    .back-image {
+        margin-bottom: 50px;
+    }
+    .back-image * {
+        padding-left: 10px;
+    }
+    .back-image h1 + h1 {
+        width: 70%;
+    }
+    .hero .back-image::before {
+        background-size: cover;
+        padding: 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+    
+
+/* Style for LARGE SCREENS */
+@media screen and (min-width: 1024px) {
+    .burger {
+        display: none;
+    }
+    
+}
+   /* Style for MOBILE  */
+@media screen and (max-width: 748px) {
+  
+    main {
+        padding:  0 50px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+   
+}
