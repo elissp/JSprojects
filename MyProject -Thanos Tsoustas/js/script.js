@@ -1,6 +1,9 @@
-let linkToHome = document.getElementById("home");
-let linkToAboutUs = document.getElementById("about-us");
-let linkToContact = document.getElementById("contact");
+const linkToHome = document.getElementById("home");
+const linkToAboutUs = document.getElementById("about-us");
+const linkToContact = document.getElementById("contact");
+const main = document.getElementById("main");
+const myButton = document.getElementById("myButton");
+
 const openRequestedUrlHome = () => {
   window.open("index.html", "_self");
 };
@@ -15,13 +18,8 @@ linkToHome.addEventListener("click", openRequestedUrlHome);
 linkToAboutUs.addEventListener("click", openRequestedUrlAboutUs);
 linkToContact.addEventListener("click", openRequestedUrlContact);
 
-let main = document.getElementById("main");
-
-let myButton = document.getElementById("myButton");
-
 function topFunction() {
-  main.scrollTop = 0;
-  main.scrollTop = 0;
+  main.scrollTo = 0;
 }
 
 myButton.addEventListener("click", topFunction);
