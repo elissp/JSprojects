@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: rgb(15, 36, 155);
+    height: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+#logo h1 {
+    text-align: center;
+    color: blueviolet;
+}
+
+nav {
+    background-color: #243473;
+
+}
+nav ul {
+    position: relative;
+    left: 60%;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    width: 100px;
+    height: 40px;
+    float: left;
+}
+
+nav ul li:nth-child(2) {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #243473;
+    border-radius: 10px;
+}
+
+
+
+nav ul li a:hover {
+    background-color: red;
+    border-radius: 10px;
+}
+
+nav ul ul ul {
+    position: relative;    /* Pio swsto position edw */
+    left: 100%;
+    bottom: 100%; 
+}
+
+
+.cf:before,.cf:after {
+    content: " "; 
+    /* 1 */
+    display: table; 
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+main {
+    height: 600px;
+    background-color: burlywood;
+}
+
+main div {
+    text-align: center;
+}
+
+main #main_home p {
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: #243473;
+    padding-top: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: blueviolet;
+}
+
+#myBtn {
+    background-color: darkgreen;
+    color: rgb(7, 4, 10);
+    width: 80px;
+}
