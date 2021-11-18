@@ -1,0 +1,163 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* header */
+header{
+    background-color: #243473a8;
+}
+/*header title*/
+#myTitle {
+    width: 40%;
+    color: #fff;
+    float:left;
+    height:100px;
+    font-size:1.5cm;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 100px;
+}
+/*header navigator*/
+#navigator {
+    
+    float:right;
+    width: 60%;
+    height:100px;
+}
+
+
+#navigator ul li{
+    float:left;
+    width:auto;
+    list-style:none;
+    position:relative;
+    height:24px;
+    top:76px;
+    padding-left:70px;
+    background-color: #243473;
+    border-radius: 2px;
+} 
+#navigator ul li a{
+    color:rgba(255, 255, 255, 0.878);
+    text-decoration: none;
+    font-size:  20px;
+
+}
+#navigator ul li:hover a{
+    background-color: #0c71c2;
+    border-radius: 2px;
+}
+
+.searchButton #searchInput{   
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid #0e2f56;
+    width: 160px;
+    height: 23px;
+    border-radius: 3px;
+   
+}
+.searchButton #submit{    
+    width: 35px;
+    height: 23px;
+    font-size: 15px;
+    border:1px solid #0e2f56;
+    border-radius: 3px;
+}
+
+/*main*/
+main{height: 1500px;
+    background-image: url(../images/image-9.jpg);
+    background-size: cover;
+    padding-top:100px;
+}
+
+/*contact main*/
+#contact {
+    padding:10px;
+    width: 500px;
+    color:#fff;
+}
+
+.etiketa {
+    width: 20%;
+    float:left;
+}
+.eisagogi {
+    width: 300px;
+    float:left;
+}
+.eisagogi input{
+    width: 250px;
+}
+#contact textarea{
+    margin-top: 10px;
+}
+
+/*index main*/
+main .container p{
+    text-align: justify;
+    text-decoration: justify;
+    color:red;
+    width:300px;
+}
+footer {
+    background-color: rgb(24, 57, 95);
+    height: 100px;
+    color: white;
+}
+footer p {
+    text-align: center;
+    padding-top:40px;
+}
+
+#topBtn {
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background-color:rgb(11, 119, 190);    
+    cursor: pointer;
+    display: none;
+}
+
+/*aboutus style*/
+
+#icons {    
+    float:right;
+    width: 40%;
+}
+#infoMe #myInfo{
+    margin-left:100px;
+}
+#myInfo {
+    float:left;
+    width:50%;
+    font-size: 2cm;
+}
+
+
+
+
+
+
+
+/*clearfix*/
+ 
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+ 
+.cf:after {
+    clear: both;
+}
