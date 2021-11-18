@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles/output.css">
+	<link rel="stylesheet" type="text/css" href="styles/form.css">
+	<title>C○M | Contact</title>
+</head>
+<body>
+	<button class="back-to-top" onclick="backToTop()">
+		<i class="fas fa-chevron-up"></i>
+	</button>
+	
+	<!-- NAVIGATION -->
+	<nav>
+		<div class="container">
+			<div class="navbar">
+				<div class="nav-logo">
+					<img 
+						src="img/CM_logo2.png" 
+						alt="Logo" />
+				</div>
+				
+				<div class="nav-links">
+					<ul>
+						<li>
+							<a class="page-link" href="javascript:void(0)">Home</a>
+						</li>
+						<li>
+							<a class="page-link" href="javascript:void(0)">WhoAmI</a>
+						</li>
+						<li>
+							<a class="page-link active" href="javascript:void(0)">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- CONTACT FORM -->
+	<div class="container form-container">
+		<form id="form" class="form">
+			<h2>Επικοινωνήστε μαζί μας</h2>
+			<div class="form-control">
+				<label for="username">Όνομα</label>
+				<input id="username" type="text" placeholder="Εισάγεται Όνομα">
+			</div>
+			<div class="form-control">
+				<label for="email">Email</label>
+				<input id="email" type="text" placeholder="Εισάγεται Email">
+			</div>
+			<div class="form-control">
+				<label for="phone">Αριθμός</label>
+				<input 
+					id="tel" 
+					type="tel" 
+					placeholder="Εισάγεται Αριθμό Τηλεφώνου"
+					pattern="[6]{1}-[9]{1}-[0-9]{8}"
+					title="69XXXXXXXX">
+			</div>
+			<div class="form-control">
+				<label for="text">Μήμυμα</label>
+				<textarea id="message" type="text" placeholder="Εισάγεται Το Μήμυμα Σας"></textarea>
+			</div>
+			<button type="submit">Υποβολή</button>
+		</form>
+	</div>
+	
+	<!-- FOOTER -->
+	<footer>
+		<h4>&copy; <span id="year"></span> C○M</h4>
+	</footer>
+	
+	<script src="scripts/script.js"></script>
+	
+</body>
+</html>

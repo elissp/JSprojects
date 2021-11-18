@@ -1,0 +1,125 @@
+/* rgba(36, 52, 115, 1) */
+
+
+body > .container {
+	margin-top: 150px;
+	margin-bottom: 140px;
+}
+
+.card-comp {
+	color: var(--primary);
+	font-weight: 300;
+	position: relative;
+	width: 50%;
+	height: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: space-around; */
+	padding-top: 120px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	margin: 0px auto;
+	border-radius: 5px;
+	background-color: rgba(36, 52, 115, 0.4);
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-comp .card-id img {
+	position: absolute;
+	top: -15%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	border-radius: 50%;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-comp .card-header,
+.card-comp .card-body {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.card-comp .card-skillset {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.card-comp .card-body h2,
+.card-comp .card-body p {
+	text-align: justify;
+}
+
+.card-comp .card-header h2,
+.card-comp .card-body h2 {
+	margin-bottom: 5px;
+}
+
+.card-comp .card-header p,
+.card-comp .card-body p {
+	font-size: 18px;
+}
+
+.card-skillset h2 {
+	margin-bottom: 10px;
+}
+
+.skill-container {
+  width: 100%;
+	margin-bottom: 5px;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  color: white;
+}
+
+.html {
+	width: 80%; 
+	background-color: var(--primary);
+	border-radius: 10px;
+}
+
+.css {
+	width: 85%; 
+	background-color: var(--primary);
+	border-radius: 10px;
+}
+
+.js {
+	width: 55%; 
+	background-color: var(--primary);
+	border-radius: 10px;
+}
+
+.card-comp .card-socials {
+	margin-top: 5px;
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-comp .card-socials i.fab  {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	font-size:25px;
+	border-radius: 100%;
+	text-align: center;
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+.card-comp .card-socials i.fab:hover {
+	background-color: var(--secondary);
+	color: var(--primary);
+	transition: all 0.3s ease-in-out;
+}
