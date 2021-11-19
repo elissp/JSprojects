@@ -23,8 +23,9 @@ function BankAcount(OwnerName,Balance,Withdraw,Deposit){
             console.log ("Enter a number ");
         }
         this.Balance = this.Balance + userInput ;
+        console.log(this.Balance);
     }
-    console.log(this.Balance);
+    
 }
 
 
