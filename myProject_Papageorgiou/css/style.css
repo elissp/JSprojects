@@ -71,7 +71,6 @@ main {
 
 /*main button styling*/
 #myBtn {
-    /* display: none; */
     position: absolute;
     bottom: 50px;
     right: 100px; 
@@ -161,6 +160,14 @@ main {
 #input input{
     margin-bottom: 20px;
     width: 240px;
+}
+
+#submit {
+    background-color: #384472;
+    color: #fff;
+    padding: 5px;
+    margin-left: 90px;
+    margin-top: 10px;
 }
 
 /*footer styling*/
