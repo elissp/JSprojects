@@ -34,7 +34,7 @@ const VaggelisMarinakisPsila = new BankAcount("Vaggelis Marinakis",1000000,BankA
 VaggelisMarinakisPsila.Withdraw();
 VaggelisMarinakisPsila.Deposit();
 
-//Direct Method
+//Object Literal
 var anotherBankAccount = {
     Name:"Dimitris Gianakopoulos",
     Balance : 100,
