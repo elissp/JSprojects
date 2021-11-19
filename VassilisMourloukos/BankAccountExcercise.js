@@ -15,7 +15,7 @@ function BankAcount(OwnerName,Balance,Withdraw,Deposit){
             else{
                 this.Balance = this.Balance - userInput;
             }
-            console.log(this.Balance);
+            console.log(`Your new bank balance is ${this.Balance}`);
     };
     this.Deposit = function() {
         var userInput =parseInt(prompt("Please enter the requested ammount "));
@@ -23,7 +23,7 @@ function BankAcount(OwnerName,Balance,Withdraw,Deposit){
             console.log ("Enter a number ");
         }
         this.Balance = this.Balance + userInput ;
-        console.log(this.Balance);
+        console.log(`Your new bank balance is ${this.Balance}`);
     }
     
 }
@@ -50,7 +50,7 @@ var anotherBankAccount = {
             else{
                 this.Balance = this.Balance - userInput;
             }
-            console.log(this.Balance);
+            console.log(`Your new bank balance is ${this.Balance}`);
 } ,
     Deposit: function() {
         var userInput =parseInt(prompt("Please enter the requested ammount "));
@@ -58,8 +58,7 @@ var anotherBankAccount = {
             console.log ("Enter a number ");
         }
         this.Balance = this.Balance + userInput ;
-        console.log(this.Balance);
-    }
+        console.log(`Your new bank balance is ${this.Balance}`);
     
 }
 anotherBankAccount.Deposit();
