@@ -1,0 +1,35 @@
+//---Create an object named myCar and give it properties named make, model, and year (use your favorite car)---//
+
+// Object Literal
+let myCar ={
+  brand: "Toyota",
+  model: "Yaris",
+  year: "2021"
+}
+
+console.log(myCar.brand);
+
+//Object Constructor 
+function myCar(brand,model,year){
+  this.brand= brand;
+  this.model = model;
+  this.year= year;
+} 
+const Toyota =  new myCar('Toyota','Yaris','2021');
+
+console.log(Toyota);
+
+// object.create()
+const myCar = {
+  brand: "Toyota",
+  model: "Yaris",
+  year: "2021"
+};
+
+const Cars = Object.create(myCar);
+
+Cars.brand = "Toyota";
+Cars.model = "Yaris";
+Cars.age = "2021";
+
+console.log(Cars);
