@@ -16,8 +16,8 @@ function Programming_Book(name, genre, pages, id) {
  var Book2 = new Programming_Book("JS Skills", "General Knowledge", 500, 1052); // has its own displayInfo() method
 
  //Using Object.getOwnPropertyNames() method which simply takes an object and shows all its OWN properties.
- console.log(Object.getOwnPropertyNames(Book1)) //Console log all the propertoies of Book1
- console.log(Object.getOwnPropertyNames(Book2)) //Console log all the propertoies of Book2
+ console.log(Object.getOwnPropertyNames(Book1)) //Console log all the properties of Book1
+ console.log(Object.getOwnPropertyNames(Book2)) //Console log all the properties of Book2
 
 
  //Although the code runs perfectly fine, there is a slight problem in it.
