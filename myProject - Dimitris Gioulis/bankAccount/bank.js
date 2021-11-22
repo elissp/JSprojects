@@ -47,3 +47,27 @@ console.log(myAccount);
 
 myAccount.withdraw(20);
 console.log(myAccount);
+
+
+// prototype
+
+function bankAccount (name, balance) {
+  this.name = name;
+  this.balance = balance
+}
+
+// const client1 = new BankAccount ("john", 100);
+
+bankAccount.prototype.deposit = function (deposit) {
+  return this.balance + deposit;
+}
+
+bankAccount.prototype.withdraw = function(withdraw) {
+  if (withdraw > this.balance) {
+    return alert("error!")
+  } else {
+    return this.balance - withdraw
+  }
+}
+
+console.log();
