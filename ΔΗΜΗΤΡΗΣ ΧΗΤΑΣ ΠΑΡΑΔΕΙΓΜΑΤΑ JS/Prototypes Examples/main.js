@@ -68,7 +68,7 @@ class Food_Book {
 
 //And let's even clarify further that Book.prototype is not the prototype of the function Book.
 
-Food_Book.prototype === Object.getPrototypeOf(Book); // false
+Food_Book.prototype === Object.getPrototypeOf(book1); // false
 
 //To add properties to the prototype of book1 (and all other instances of Book) 
 //we can  use Object.getPrototypeOf(book1) and define stuff on it like so:
