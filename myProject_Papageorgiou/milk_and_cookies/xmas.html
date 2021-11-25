@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <p>Is it Time for Milk and Cookies?</p>
+
+    <input type="date" name="xmas" id="xmas">
+    <br>
+    <br>
+
+    <button onclick="timeForMilkAndCookies()">Check</button>
+
+    <div id="root">
+
+    </div>
+    
+    <script>
+        function timeForMilkAndCookies(){
+            var newDate = document.getElementById("xmas").value;
+            newDate = new Date(newDate);
+           
+            var month = newDate.getMonth()+1;
+            var day = newDate.getDate();
+
+            var message = document.getElementById("root");
+
+            if (month == 12 && day == 24) {
+                message.innerHTML = `<p> It's Christmas time! Milk and Cookies time! </p>`
+                return true;
+            }
+            else {
+                message.innerHTML = `<p> It's not Milk and Cookies time. Sorry! </p>`
+                return false;
+            }
+            
+        }
+    </script>
+
+
+</body>
+
+</html>
