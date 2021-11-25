@@ -73,3 +73,4 @@ const heroW = new wizard('Gandalf', 5, 'Stuff')
 const heroE = new elf('Legolas', 4, 'bow')
 console.log(heroW);
 console.log(heroE);
+
