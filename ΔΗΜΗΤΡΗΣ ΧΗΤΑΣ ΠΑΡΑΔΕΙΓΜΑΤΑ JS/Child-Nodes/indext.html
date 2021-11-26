@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <ul>
+        <li class='l1'>AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+        <li>DDD</li>
+        <li>EEE</li>
+
+    </ul>
+
+
+
+
+
+    <script>
+        //access child node
+        const child = document.body.children[0].children[1];
+        console.log(child)
+        //change color
+        const firstElem = document.body.children[0].children[1].style.color = 'red';
+        // create New Li
+        const newListItem = document.createElement('li');
+
+        //assign the text value to LI
+        newListItem.textContent = 'FFF' ;
+        
+        //Add in list
+
+        document.body.children[0].insertBefore(newListItem , document.body.children[0].children[4])
+
+
+
+    </script>
+</body>
+</html>
