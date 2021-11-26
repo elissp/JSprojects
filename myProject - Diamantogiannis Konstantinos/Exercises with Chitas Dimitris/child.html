@@ -14,6 +14,7 @@
         <li>DDD</li>
         <li>EEE</li>
     </ul>
+    <button type="button" id="myBtn" onclick="myFunc()">Aseme</button>
     <script>
         // dikes mou pipes
         // var x = document.body.ul.getElementsByTagName("li")[1]
@@ -35,11 +36,14 @@
         // Add in list
         document.body.children[0].insertBefore(newListItem,document.body.children[0].children[4])
 
+         function myFunc() {
         const ex1 = document.body.children[0].children[3].style.color = "green";
         const ex2 = document.body.children[0].children[2].style.fontFamily = "Helvetica";
         const ex3 = document.body.children[0].children[5].style.fontWeigth = "Bold";
         const ex4 = document.body.children[0].children[4].style.visibility = "hidden";
         const ex5 = document.body.children[0].children[0].style.fontFamily = "Helvetica";
+        return ex1 , ex2, ex3, ex4, ex5 ; 
+        }
         
     </script>
 </body>
