@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="dwsto.js">
+        
+    </script> -->
+    
+        <ul>
+            <li>AAA</li>
+            <li>BBB</li>
+            <li>CCC</li>
+            <li>DDD</li>
+            <li>EEE</li>
+    </ul>
+
+    <script>
+
+        const child = document.body.children[0].children[1];
+        console.log(child);
+
+        document.body.children[0].children[1].style.color = "blue";
+
+        let b = document.createElement("li");
+        
+        b.textContent = "FFF";
+
+        document.body.children[0].insertBefore(b, document.body.children[0].children[4]);
+
+        function Dwse() {
+            document.body.children[0].children[3].style.color = "blue";
+            document.body.children[0].children[2].style.fontFamily = "Impact,Charcoal,sans-serif";
+            document.body.children[0].children[0].style.fontFamily = "Helvetica"
+            document.body.children[0].children[4].style.fontSize = "red"
+            
+        }
+    </script>
+    
+</body>
+</html>
