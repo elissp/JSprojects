@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="li">AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+        <li>DDD</li>
+        <li>EEE</li>
+    </ul>
+    <button type="button" id="btn" onclick="myFunc()">Click Me</button>
+    <script>
+
+        // access child node
+        const child = document.body.children[0].children[1];
+
+        // change color
+        const firstElem = document.body.children[0].children[1].style.color = "red";
+
+        // create new li
+        const newListItem = document.createElement("li");
+
+        // assign the text value to li
+        newListItem.textContent = "FFF";
+
+        // add in list
+        document.body.children[0].insertBefore(newListItem, document.body.children[0].children[4]);
+
+
+
+
+
+
+        function myFunc() {
+
+        // DDD  - > color green
+        const fourthElem = document.body.children[0].children[3].style.color = "green";
+
+        // CCC - font 'Helvetica'
+        const fontFamily = document.body.children[0].children[2].style.fontFamily  = "Helvetica";
+
+        // AAAA
+        document.body.children[0].children[0].textContent = "AAAA"
+        // AAA - font 'Helvetica'
+        const fontFamily2 = document.body.children[0].children[0].style.fontFamily  = "Helvetica";
+
+        // FFF - boldest
+        const boldest = document.body.children[0].children[4].style.fontWeight  = "900";
+
+        // EEE - invisible
+        const invisible = document.body.children[0].children[5].style.visibility  = "hidden";
+        
+        return fourthElem,fontFamily,fontFamily2,boldest,invisible;
+
+    }
+
+        
+    </script>
+</body>
+</html>
