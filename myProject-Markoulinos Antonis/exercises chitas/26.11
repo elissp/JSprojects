@@ -45,6 +45,8 @@
         const thirdbElem = document.body.children[0].children[3].style.fontWeight = "800";
         //invisible
         const fifthElem =  document.body.children[0].children[5].style.visibility = "hidden";
+        //+A    
+        document.body.children[0].children[0].textContent = "AAAA"
     })
     </script>
 </body>

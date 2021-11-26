@@ -13,7 +13,7 @@
 <body>
 
     <ul>
-        <li class='l1'>AAA</li>
+        <li id='l1'>AAA</li>
         <li>BBB</li>
         <li>CCC</li>
         <li>DDD</li>
@@ -42,6 +42,10 @@
             const boldF = document.body.children[0].children[4].style.fontWeight = "900";
 
             const invisibleE = document.body.children[0].children[5].style.visibility = 'hidden';
+            
+            var a4 = document.getElementById("l1");
+            var text = a4.childNodes[0];
+            text.nodeValue = "AAAA";
 
             
         }
