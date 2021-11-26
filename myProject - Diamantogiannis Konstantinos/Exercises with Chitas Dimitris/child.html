@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="11">AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+        <li>DDD</li>
+        <li>EEE</li>
+    </ul>
+    <script>
+        // dikes mou pipes
+        // var x = document.body.ul.getElementsByTagName("li")[1]
+        // x.style.color = "red"
+        // var newLi = document.getElementsByTagName("li")[3]
+        // newLi = newLi.createElement("li")
+        // newLi.textContent = "FFF"
+       
+        // Select the <ul> tag
+        const child = document.body.children[0].children[1]
+        console.log(child)
+        // change color at text in 2nd <li>
+        const firstElem = document.body.children[0].children[1].style.color = "blue";
+        
+        // create element
+        const newListItem = document.createElement("li");
+
+        newListItem.textContent = "FFF"
+        // Add in list
+        document.body.children[0].insertBefore(newListItem,document.body.children[0].children[4])
+
+        const ex1 = document.body.children[0].children[3].style.color = "green";
+        const ex2 = document.body.children[0].children[2].style.fontFamily = "Helvetica";
+        const ex3 = document.body.children[0].children[5].style.fontWeigth = "Bold";
+        const ex4 = document.body.children[0].children[4].style.visibility = "hidden";
+        
+    </script>
+</body>
+</html>
