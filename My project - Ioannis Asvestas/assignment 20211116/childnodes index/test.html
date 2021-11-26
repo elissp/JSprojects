@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li>AAA</li>
+        <li>BBB</li>
+        <li>CCCsasdasdd</li>
+        <li>DDD</li>
+        <li>EEE</li>
+    </ul>
+    <button onclick="callIt()">Test it</button>
+    <script>
+        document.body.children[0].children[1].style.color = "red";
+        let b = document.createElement("li");
+        b.textContent = "FFF";
+
+        document.body.children[0].insertBefore(b, document.body.children[0].children[4]);
+
+        function callIt() {
+            document.body.children[0].children[3].style.color = "green";
+            document.body.children[0].children[2].style.fontFamily = "Impact,Charcoal,sans-serif";
+            document.body.children[0].children[0].style.fontFamily = "Helvetica"
+            document.body.children[0].children[4].style.fontSize = "x-large";
+            document.body.children[0].children[5].style.visibility = "hidden";
+        }
+    </script>
+
+    <script src="test.js"></script>
+</body>
+
+</html>
