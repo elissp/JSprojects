@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
   <ul>
-    <li>AAA</li>
+    <li id="change">AAA</li>
     <li>BBB</li>
     <li>CCC</li>
     <li>DDD</li>
@@ -30,6 +29,9 @@
     newListItem.textContent = 'FFF';
     document.body.children[0].insertBefore(newListItem, document.body.children[0].children[4])
 
+    var change = document.getElementById('change')
+    var zeroElm = change.childNodes[0];
+    zeroElm.nodeValue = 'AAAA';
 
 
     function changeStyle() {
