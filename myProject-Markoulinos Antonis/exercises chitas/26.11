@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <ul>
+        <li class='l1'>AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+        <li>DDD</li>
+        <li>EEE</li>
+
+    </ul>
+
+    
+    <button id="myFunc">Reload Button</button>
+
+    <script>
+
+        document.getElementById('myFunc').addEventListener('click', () => {
+        //access child node
+        const child = document.body.children[0].children[1];
+        console.log(child)
+        
+        //change color
+        const firstElem = document.body.children[0].children[1].style.color = 'red';
+        const thirdElem = document.body.children[0].children[3].style.color = 'green';
+        // create New Li
+        const newListItem = document.createElement('li');
+        //assign the text value to LI
+        newListItem.textContent = 'FFF' ;      
+        //Add in list
+        document.body.children[0].insertBefore(newListItem , document.body.children[0].children[4])
+        //change font
+        const secondfElem = document.body.children[0].children[2].style.fontFamily = 'helvetica';
+        const firstfElem = document.body.children[0].children[1].style.fontFamily = 'helvetica';
+        //change bold
+        const thirdbElem = document.body.children[0].children[3].style.fontWeight = "800";
+        //invisible
+        const fifthElem =  document.body.children[0].children[5].style.visibility = "hidden";
+    })
+    </script>
+</body>
+</html>

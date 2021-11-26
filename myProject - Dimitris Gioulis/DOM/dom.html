@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <ul>
+    <li>AAA</li>
+    <li>BBB</li>
+    <li>CCC</li>
+    <li>DDD</li>
+    <li>EEE</li>
+  </ul>
+
+  <button onclick="changeStyle();">Change Style </button>
+
+  <script>
+    const child = document.body.children[0].children[1];
+    console.log(child);
+
+
+    // create new li 
+    const newListItem = document.createElement('li');
+    newListItem.textContent = 'FFF';
+    document.body.children[0].insertBefore(newListItem, document.body.children[0].children[4])
+
+
+
+    function changeStyle() {
+      const zeroElm = document.body.children[0].style.fontFamily = 'helvetica';
+      const firstElm = document.body.children[0].children[1].style.color = 'blue';
+      const secondElm = document.body.children[0].children[2].style.fontFamily = 'helvetica'
+      const thirdElm = document.body.children[0].children[3].style.color = 'green';
+      const fourthElm = document.body.children[0].children[4].style.fontWeight = 'bold'
+      const fifthElm = document.body.children[0].children[5].style.visibility = 'hidden'
+    }
+  </script>
+
+</body>
+
+</html>
