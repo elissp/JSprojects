@@ -34,7 +34,7 @@ document.body.children[0].children[4].style.fontWeight = "bold"
 document.body.children[0].children[5].style.visibility = 'hidden';
 
 })
-
+const a = document.body.children[0].getElementsByTagName("li")
 document.body.children[2].addEventListener('click', function() {
     for (var i = 0, len = a.length; i < len; i++ ){
         document.body.children[0].children[i].style.fontWeight = 'revert';
