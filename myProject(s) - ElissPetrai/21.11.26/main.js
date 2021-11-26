@@ -27,5 +27,10 @@ document.getElementById('myFunc').addEventListener('click', () => {
     //Invisible 
     const invElement = document.body.children[0].children[4].style.visibility = 'hidden'
 
+    //Change Text 
+    var textToChange = document.getElementById('tex')
+    var oneMoreA = textToChange.childNodes[0];
+    oneMoreA.nodeValue = 'aaaa';
+
      })
 //}
