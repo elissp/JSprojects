@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChildrenExamples</title>
+</head>
+<body id="list">
+    <ul >
+        <li>
+            AAA
+        </li>
+        <li>BBB
+
+        </li>
+        <li>
+            CCC
+        </li>
+        <li>
+            DDD
+        </li>
+        <li>
+            EEE
+        </li>
+    </ul>
+    <button onclick="changes()">Do the thing </button>
+    <script>
+        //Access child node
+        var childNode = document.body.children[0].children[1];
+        //change color
+        var changeColor =  document.body.children[0].children[1].style.color = "red";
+        //create the new li
+        var createNewElement = document.createElement("li");
+        //Assign text value to li
+        createNewElement.textContent = "FFF";
+        // function changes(){
+            document.body.children[0].insertBefore(createNewElement, document.body.children[0].children[4]); 
+            var creatNewText = document.createTextNode("A");
+            function changes(){
+        var changColor2 = document.body.children[0].children[3].style.color = "green";
+        childNode=  document.body.children[0].children[0].style.fontFamily = "Helvetica";
+                    document.body.children[0].children[2].style.fontFamily ="Helvetica";
+                    document.body.children[0].children[4].style.fontWeight = "900";
+                    document.body.children[0].children[5].style.display= "none"
+                    document.body.children[0].children[0].insertBefore(creatNewText ,document.body.children[0].children[0].childNodes[0]);
+                    document.body.children[0].children[0].style.fontFamily = "Helvetica";
+        }
+    </script>
+</body>
+</html>
