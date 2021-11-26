@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child-Nodes</title>
+  </head>
+  <body>
+    <ul>
+      <li>AAA</li>
+      <li>BBB</li>
+      <li>CCC</li>
+      <li>DDD</li>
+      <li>EEE</li>
+    </ul>
+    <button onclick="change()">change Element</button>
+    <button onclick="refresh()">Refresh the page</button>
+  </body>
+  <script>
+    function change() {
+      //access child node
+      const child = document.body.children[0].children[1];
+      console.log(child);
+      //change color
+      const firstElem = (document.body.children[0].children[1].style.color =
+        "blue");
+      const thirdElem = (document.body.children[0].children[3].style.color =
+        "green");
+      //change font family
+      const fontZeroElement =
+        (document.body.children[0].children[0].style.fontFamily = "helvetica");
+      const fontSecondElement =
+        (document.body.children[0].children[2].style.fontFamily = "helvetica");
+      //change font weight
+      const boldElem =
+        (document.body.children[0].children[4].style.fontWeight = 900);
+      //change invisible
+      const invisElem = (document.body.children[0].children[5].style.display =
+        none);
+      //create New Li
+      const newListItem = document.createElement("li");
+      //assignment the text value to li
+      newListItem.textContent = "FFF";
+      //Add in list
+      document.body.children[0].insertBefore(
+        newListItem,
+        document.body.children[0].children[4]
+      );
+      console.log(child);
+    }
+    function refresh() {
+      window.location.reload(true);
+    }
+  </script>
+</html>
