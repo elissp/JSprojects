@@ -1,5 +1,7 @@
 const category = document.getElementById("course")
-
+// Here we use a simple solution to the problem of having multiple
+// JS files. If the titles page is equal to add or edit we continue
+// with our code
 if (category.textContent == "A D D   C O U R S E S") {
     // DOM Elements
     const form = document.getElementById("form");
@@ -10,11 +12,19 @@ if (category.textContent == "A D D   C O U R S E S") {
     const endingDate = form["enddate"]
     const description = form["comments"]
 
-
+    // We create our array for our objects if the local storage does already
+    // have a course array filled with objects we dont want to re-initialize
+    // our array so we parse it and skip the second argument which gives an
+    // empty array
     const courses = JSON.parse(localStorage.getItem("courses")) || [];
 
-    const addCourse = (name, streams, typee, startdate, enddate, comments) => {
-        courses.push({
+    // With this function we de-construct an objects and use it as an argument
+    // for our function.The objects properties that we push because we know 
+    // that our arguments will have fixed values we simplify our code by
+    // writing (name) instead of (name:name,streams:streams etc...)
+    // we also seting to our local storage the new edited array
+    const addCourse = (name, streams, typee, startdate, enddate, comments) => { 
+        courses.push({    
             name,
             streams,
             typee,
@@ -28,7 +38,9 @@ if (category.textContent == "A D D   C O U R S E S") {
         return { name, streams, typee, startdate, enddate, comments };
     };
 
-
+    // We check every single element of our current arrray to see if the
+    // user input for name already exists in our array so we can throw an
+    // error
     courseName.onchange = () => {
         courses.forEach(course => {
             if (courseName.value == course.name) {
@@ -42,7 +54,10 @@ if (category.textContent == "A D D   C O U R S E S") {
     form.onsubmit = e => {
         e.preventDefault();
 
-
+        // Here we force the user to only choose an expiring date 6 months
+        // apart and for empty user inputs. At the end if all the validations
+        // pass, we call our push method with the users inputs values and we give 
+        // our array a new object and we reset the form to its original form
         if (startingDate.value[6] == "1" && endingDate.value[6] != "6") {
             alert("Courses should be 6 months apart!")
         } else if (startingDate.value[6] == "7" && endingDate.value[5] + endingDate.value[6] != "01") {
