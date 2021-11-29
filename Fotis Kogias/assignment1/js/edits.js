@@ -1,5 +1,7 @@
 const category = document.getElementById("course")
-
+// Here we use a simple solution to the problem of having multiple
+// JS files. If the titles page is equal to add or edit we continue
+// with our code
 if (category.textContent == "E D I T   C O U R S E S") {
     // DOM Elements
     const form = document.getElementById("form");
@@ -15,8 +17,8 @@ if (category.textContent == "E D I T   C O U R S E S") {
 
     const courses = JSON.parse(localStorage.getItem("courses")) || [];
 
-    // We edit the existing course with the new values by removing the old
-    // version and appending to our course array the edited version
+    // We edit the existing course by removing the current displayed object
+    // and appending the updated one at the end of our array
     const editCourse = (name, streams, typee, startdate, enddate, comments) => {
         courses.splice(editCounter, 1)
         courses.push({
@@ -35,7 +37,8 @@ if (category.textContent == "E D I T   C O U R S E S") {
 
 
     // Loading our courses one by one from our coursesArray and displaying
-    // the first course values as default
+    // the first course values as default. Basically we create option elements
+    // and appending them to our existing courses div.
     function loadCourses() {
         courses.forEach((course) => {
             var option = document.createElement("option");
@@ -51,7 +54,8 @@ if (category.textContent == "E D I T   C O U R S E S") {
     }
     loadCourses()
 
-
+    // Everytime the user scrolls the existing objects we call the onchange to trigger our function
+    // so the values are coming dynamically from our existing array
     // We find the index number of the existing course so we can use it to 
     // display its values. Also we get the value for our editCounter variable
     // so we know which index is the current course in our Array and we can remove it later
@@ -237,6 +241,7 @@ else if (category.textContent == "E D I T   S T U D E N T"){
 
     form.onsubmit = e => {
         e.preventDefault();
+
 
         students.forEach(student => {
             if (studentName.value == student.name && studentLastName.value == student.last_name) {
