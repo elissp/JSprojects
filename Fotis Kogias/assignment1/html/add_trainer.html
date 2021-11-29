@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford UC</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="cf">
+
+        <div class="container">
+            <div id="upper_img">
+            </div>
+        </div>
+
+        <nav class="cf">
+            <div class="container">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Courses</a>
+                        <ul>
+                            <li><a href="add_course.html">Add</a></li>
+                            <li><a href="edit_course.html">Edit</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Trainers</a>
+                        <ul>
+                            <li><a href="add_trainer.html">Add</a></li>
+                            <li><a href="edit_trainer.html">Edit</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Students</a>
+                        <ul>
+                            <li><a href="add_student.html">Add</a></li>
+                            <li><a href="edit_student.html">Edit</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Assignments</a>
+                        <ul>
+                            <li><a href="add_assignment.html">Add</a></li>
+                            <li><a href="edit_assignment.html">Edit</a></li>
+                        </ul>
+                    </li>
+                    <li id="sbar"><input type="text" placeholder="Search Web and Directory">
+                    </li>
+                    <li id="sbutton"><button type="button"><img src="../images/sbar.jfif" alt=""></button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="course_box">
+            <p id="course">A D D &nbsp; T R A I N E R</p>
+        </div>
+
+        <div class="container2">
+            <div id="add">
+                <form id="form">
+
+                    <div class="text">
+                        <label for="fname">First Name:</label>
+                    </div>
+
+                    <div class="inputs">
+                        <input id="fname" type="text" name="name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
+                        title="Can only accept letters for the courses name"  maxlength="30" size="30" minlength="5">
+                    </div>
+
+                    <div class="text">
+                        <label for="lname">Last Name:</label>
+                    </div>
+
+                    <div class="inputs">
+                        <input id="lname" type="text" name="last_name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
+                        title="Can only accept letters for the courses name"  maxlength="30" size="30" minlength="5">
+                    </div>
+
+                    <div class="text">
+                        <label for="subject">Subject:</label>
+                    </div>
+
+                    <div class="inputs">
+                        <select id="subject" size="" class="" name="streams">
+                            <option>JAVA</option>
+                            <option>C#</option>
+                            <option>C</option>
+                            <option>PYTHON</option>
+                            <option>JAVASCRPIT</option>
+                        </select>
+                    </div>
+
+                    <div class="text">
+
+                    </div>
+
+                    <div id="buttons_box">
+
+                        <button class="buttons" id="submit">Save</button>
+                        <input class="buttons" type="reset" value="Clear">
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script src="../js/add.js"></script>
+    </main>
+
+    <footer class="cf">
+        <div class="container">
+
+            <div id="footer1">
+                <img id="flogo" src="../images/footerlogo1.png" alt="">
+                <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quaerat ea ipsam
+                    ratione saepe ipsum!</p>
+                <p id="copyright">2021 &copy; Kogias Fotis</p>
+            </div>
+
+            <div id="footer2">
+                <p>Contact</p>
+                <br>
+                <span>Email: </span><a href="mailto:oxford@hotmail.com">oxford@hotmail.com</a>
+                <br>
+                <span>Telephone: </span><a class="email_tel" href="tel:+123456789">+30 123456789</a>
+
+                <div id="footer_links">
+                    <a href="https://www.facebook.com" target="blank"><img src="../images/fb3.png" alt="facebook"></a>
+                    <a href="https://www.twitter.com" target="blank"><img src="../images/twitter1.png"
+                            alt="twitter"></a>
+                    <a href="https://www.youtube.com" target="blank"><img src="../images/y6.png" alt="youtube"></a>
+                    <a href="https://www.instagram.com" target="blank"><img src="../images/insta4.png"
+                            alt="instagram"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
