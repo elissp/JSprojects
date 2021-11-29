@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap" rel="stylesheet">
+    <title>Add An Assignment</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav nav-panel">
+                <div class="logo">
+                    <h4>People<span>Cert<span>&reg;</span></span></h4>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="student.html">Add a Student</a>
+                    </li>
+                    <li>
+                        <a href="teachers.html">Add a Teacher</a>
+                    </li>
+                    
+                    <li>
+                        <a href="course.html">Add a lesson</a>
+                    </li>
+                    <li>
+                        <a href="assigment.html">Add an Assigment</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <a class="logout-btn" href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <section class="panel-section_forms">
+        <!-- <div class="add-btn">
+            <span></span>
+            <h1>Add Α course</h1>
+        </div> -->
+        <div class="form_container">   
+            <h1 class="form-header">Add An Assignment:</h1>
+            <!-- <button class="btn-add">Add a New Student</button> -->
+            <form id="add_students">
+                <div class="form-grid">
+                    <div class="input-box">
+                        <span class="input-box-details">Assigment Title:</span>
+                        <input type="text" name="courseTitle" id="assignment-title" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="input-box-details">Sub Date Time:</span>
+                        <input type="date" name="" id="sub-date">
+                    </div>
+                    <div class="input-box">
+                        <span class="input-box-details">Oral Mark:</span>
+                        <input type="date" name="" id="oral-mark">
+                    </div>
+            
+                    <div class="input-box">
+                        <span class="input-box-details">Total Mark</span>
+                        <input type="text" name="" id="total-mark">
+                    </div>
+                </div>
+                <!--End user-details -->
+                <div class="input-box">
+                    <span class="input-box-details">Assign. Description:</span>
+                    <textarea name="" id="text-area" rows="4"></textarea>
+                </div>
+                <input type="submit" value="Add Assigmnet" id="form-button" class="form-btn">
+            </form>
+        </div> <!--End form container-->
+    </section>
+    <section class="section-table">
+        <table class="table-list" id="assignment-list">
+            <thead>
+                <tr>
+                    <th >Assigm. Title</th>
+                    <th >SubDateTime</th>
+                    <th >Oral Mark</th>
+                    <th >Total Mark</th>
+                    <th >Course Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-list-row">
+                    <td>Build a javascript Color Game</td>
+                    <td>12/01/2022</td>
+                    <td>60/100</td>
+                    <td>60/100</td>
+                    <td>Build a javascript Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, reprehenderit.</td>
+                    <td>
+                        <button class="edit-btn btn-table">Edit</button>
+                        <button class="delete-btn btn-table" onClick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>       
+        </table> 
+    </section>  
+<script src="assignment.js"></script>
+</body>
+</html>

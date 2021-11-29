@@ -1,0 +1,789 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --background-color: #ecf0f17e;
+    --color-red: #ed2553;
+    --color-purple: #4c075a;
+    --color-red-light: #ed25548f;
+    --color-details: #EDE9D0;
+    --color-valid: #00c03644;
+}
+
+
+body {
+    
+    font-size: 1.8em;
+    font-family: 'Poppins', sans-serif;
+}
+    
+/* main { 
+    width: 100%;
+} */
+
+
+/* --------------------------------------------------------------------------------------- HOME PAGE ---------------------------------------------------------------------------------------- */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NAV-BAR MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.logo h4 {
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.logo-home h4 span {
+    color: rgb(0, 0, 0);
+}
+.logo-panel h4 span {
+    color: var(--color-red);
+}
+
+
+.logo h4 span span {
+    position: absolute;
+    font-size: 1.3  rem;
+}
+/* bottom nav */
+div.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    height: 10vh;
+    
+}
+div.nav-home {
+    background-color: var(--color-red);
+}
+
+div.nav-panel {
+    background-color: #3b3b3b;
+    border-top: 4px solid var(--color-red);
+}
+
+
+.burger {
+    display: none;
+}
+.nav .burger div {
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background-color: white;
+}
+
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    z-index: 3;
+}
+    
+    
+
+ul.nav-links a {
+    text-decoration: none;
+    margin-right: 40px;
+    color: white;
+    
+}
+
+/* style the login button */
+button.login, .logout-btn {
+    width: 80px;
+    border: none;
+    color: var(--color-purple);
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.logout-btn {
+    text-align: center;
+}
+
+button.login i {
+    padding-right: 5px;
+}
+
+
+    
+
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the Container of the POPUP ~~~~~~~~~~~~~NEW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+ .pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.close-pop-up {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.close-pop-up .fa-window-close {
+    font-size: 3rem;
+}
+    
+
+
+.pop-up form {
+    width: 30%;
+    height: auto; 
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    padding: 40px;
+} 
+
+ .pop-up-active {
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.459);
+    z-index: 1;
+} 
+
+
+
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the HERO SECTION ~~~~~~~~~~~~~NEW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+section.hero {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    min-height: 90vh;
+    
+}
+
+section.hero > * {
+    flex-basis: 100%;
+    padding: 5rem 0;
+}
+
+ .hero-image {
+    background-image: url("../imgs/womanlaptop.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 1000px; */
+    height: 70vh;
+}
+.hero-text {
+    color: rgba(2, 2, 2, 0.856);
+}
+
+.hero-text h1 {
+    font-size: 10rem;
+    line-height: 1;
+    position: relative;
+    color: var(--color-purple);
+    margin-bottom: 10px;
+}
+.hero-text h1 span {
+    color: var(--color-red);
+}
+
+.hero-text p {
+    padding: 30px 0;
+}
+
+.hero-text button {
+    background-color: transparent;
+    border: 4px solid var(--color-red);
+    font-size: 2rem;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: var(--color-red);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the COMPANIES SECTION ~~~~~~~~~~~~~NEW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.companies {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(243, 243, 243, 0.192);
+    padding: 3rem;
+}
+
+.companies img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    border: 4px solid rgba(194, 194, 194, 0.192);
+    border-radius: 5px;
+    padding: 8px;
+    -webkit-filter: grayscale(1); /* Safari/Chrome */
+    filter: grayscale(1);
+    background-color: #fff;
+}
+
+.companies div{
+    display: flex;
+    align-items: center;
+}
+
+.companies div h2{
+    color: rgb(194, 194, 194);
+}
+
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the lESSONS CARDS ~~~~~~~~~~~~~NEW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.card-section {
+    background-color: rgba(226, 38, 226, 0.055);
+    padding: 5rem 0;
+    width: 100%;
+}
+
+
+
+
+.coding-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 100%;
+    padding: 5rem 0;
+    flex-wrap: wrap;
+
+}
+.card-opener {
+    text-align: center;
+}
+.card-opener p {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card-opener h1 {
+    color: var(--color-purple);
+    font-size: 3.5rem;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    border-radius: 5px;
+    max-width: 350px;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 2rem;
+
+}
+
+.card-top {
+    
+    position: relative;
+    height: 200px;
+    border-bottom: 2px solid var(--color-red);
+    background-size: cover;
+}
+
+.card-top-1 {
+    background-image: url('../imgs/card-image1.jpg');
+    
+}
+
+.card-top-2 {
+    background-image: url('../imgs/card-image2.jpg');
+}
+.card-top-3 {
+    background-image: url('../imgs/card-image3.png');
+}
+
+
+.card-top img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid var(--color-red);
+    background-color: #FFF;
+}
+
+.card-bottom {
+    padding: 40px 20px 20px 10px;
+}
+    
+.card-bottom .card-title {
+    position: relative;
+    margin-bottom: 30px;
+}
+.card-bottom .card-title::after {
+    content: "";
+    width: 25px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--color-red);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+.card-bottom p {
+    margin-bottom: 30px;
+    font-size: calc(0.8vw + 0.3rem);
+}
+
+.card-button {
+    background-color: var(--color-red);
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    font-size: 2rem;
+    border: 4px solid #fff;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the Panel Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+section.panel-section_forms{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the ADD BUTTON ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div.add-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* create a cross icon */
+div.add-btn span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--color-red-light);
+    cursor: pointer;    
+}
+
+div.add-btn span::before {
+    content: "+";
+    color: var(--color-red-light);
+    font-size: 30px;
+}
+div.add-btn span:hover {
+    border: 3px solid var(--color-red);
+}
+div.add-btn span::before:hover {
+    color: var(--color-red);
+
+}
+
+
+div.add-btn h1 {
+    padding-left: 10px;
+}
+    
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the form ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Style the form header */
+
+h1.form-header {
+    font-size: 3rem;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+h1.form-header::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 5px;
+    background-color: var(--color-red);
+    left: -20px;
+    top:50%;
+    transform: translateY(-50%);
+    
+}
+
+div.form_container {
+    background-color: #fff;
+    width: 70%; /*change this later */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* form grid container */
+div.form_container form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px 30px;
+}
+
+/* ~~~~~ style the inputs~~~~~~ */
+.input-box {
+    margin-bottom: 15px;
+}
+
+
+/* .input-box-full-size {
+    grid-column: 1/3;
+    width: 100%;
+} */
+
+span.input-box-details {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.input-box input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    border-radius: 5px;
+}
+
+.input-box input:focus {
+    border-color: var(--color-red);
+}
+.input-box input:valid {
+    border-color: var(--color-valid);
+}
+
+/* ~~~~~~~~~~~ style the RADIO buttons ~~~~~~~~~~*/
+/* Radio buttons on: Add a student 
+/* probably not the best way possible */
+.input-box_radio {
+    margin-bottom: 15px;
+}
+.input-box_radio input[type="radio"] {
+    display:none;
+}
+
+.input-box_radio label {
+    cursor: pointer;
+    margin-right: 5px;
+}
+.input-box_radio label span {
+    padding: 8px 20px 8px 8px;
+    border-radius: 5px;
+    display: inline-flex; 
+    align-items: center;
+    background-color: rgba(226, 226, 226, 0.568);
+    border-bottom: 2px solid #ccc;
+}
+
+/* create the outer radio circle */
+.input-box_radio label span::before {
+    content: "";
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* When checked target the span */
+.input-box_radio input[type="radio"]:checked + span {
+    background-color: var(--color-red);
+    color: white;
+} 
+/* create the radio button inner circle when checked */
+input[type="radio"]:checked + span::before {
+    box-shadow: inset 0 0 0 5px white;
+    background-color: rgb(209, 209, 209);
+} 
+    
+
+/* ~~~~~~~~~~~ style the SELECT buttons ~~~~~~~~~~*/
+.input-box_select select {
+    height: 40px;
+    min-width: 130px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    border-radius: 5px;
+}
+/* ~~~~~~~~~~~ style the text Area ~~~~~~~~~~*/
+.input-box textarea {
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 10%;
+    outline: none;
+    padding: 5px;
+}
+
+/* ~~~~~~~~~~~ style the FORM BUTTON ~~~~~~~~~~*/
+
+.form-btn {
+
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 1.8rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--color-red-light);
+    color: #fff;
+    outline: none;
+}
+
+.form-btn:hover,
+.form-btn:active,
+.form-btn:focus {
+    background-color: var(--color-red);
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Create Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.section-table {
+    width: 100%;
+    min-height: 50vh;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-list {
+    width: calc(70% - 20px);
+    margin-bottom: 20px;
+}
+.table-list thead {
+    background-color: var(--color-red);
+}
+.table-list thead tr th {
+    color: #fff;
+    padding: 1rem;
+    border: 1px solid #fff;
+}
+
+.table-list tbody tr td {
+    background-color: #fff;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    color: rgb(85, 80, 80);
+    text-align: center;
+    max-width: 400px;
+}
+
+.table-textarea-class {
+     /* max-width: 400px; */
+     min-height: 40px;
+}
+
+/* style buttons that are created by the table */
+
+.btn-table {
+    border: none;
+    border-radius: 2px;
+    padding: 0.4rem 0.7rem;
+    color: white;
+    outline:none; 
+    width: calc(50% - 5px);
+    cursor: pointer;
+}
+    
+    
+.edit-btn {
+    background-color: rgb(163, 163, 163);
+    margin-right: 1px;
+    
+}
+.edit-btn:hover, .edit-btn:focus {
+    background-color: rgb(136, 134, 134);
+}
+
+.delete-btn {
+    background-color: var(--color-red-light);
+    margin-left: 1px;
+}
+.delete-btn:hover, .delete-btn:focus    {
+    background-color: var(--color-red);
+}
+
+    
+
+
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Style the FOOTER ~~~~~~~~~~~~~NEW~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-red);
+    padding: 5rem;
+}
+
+footer ul {
+    list-style: none;
+}
+footer ul li:nth-child(1){
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    color: rgb(223, 223, 223);
+}
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MEDIA QUERIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* MEDIA QUERIES - STYLE THE NAVBAR FOR SMALLER DEVICES */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    footer ul {
+        margin-bottom: 15px;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background-color: var(--color-red);
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50%;
+        transform: translateY(-200%);
+        transition: transform 0.6s ease-in;
+        font-size: 1.8rem;
+        z-index: 2;
+        /* transform: translateY(-200%); */
+        
+    }
+    .burger {
+        display: block;
+    }
+    .nav-active {
+      transform: translateY(0%);
+    }
+
+    .pop-up form {
+        width: 80%;
+    }
+    /* style the hero */
+    section.hero {
+        flex-wrap: wrap;
+    }
+    .hero-text {
+        padding: 0 50px;
+        order: 2;
+    }
+
+    .hero-text h1 {
+        font-size: calc(5vw + 3rem);
+    }
+
+    .hero-image {
+        height: 40vh;
+        width: auto;
+        order: 1;
+    }
+    .hero-text button {
+        padding: 1rem 2rem;
+    }
+
+    .companies {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    /* style the hero */
+    .hero-text {
+        padding: 20px;
+    }
+}
+@media (max-width: 825px) {
+    div.form_container form .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1.form-header {
+        font-size: 2.5rem;
+    }
+}
+ @media screen and (max-width: 1350px) {
+     
+    
+     .table-list thead th {
+        display: none;
+    }
+     
+     .table-list tbody tr td {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+        min-height: 40px;
+        position: relative;
+        max-width: 100%;
+    
+    }
+
+    .table-list tbody tr td:last-child {
+        margin-bottom: 15px;
+    } 
+    .btn-table {
+        width: 60px;
+    }
+
+    .table-textarea-class {
+        width: 100%;
+    }
+} 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap" rel="stylesheet">
+    <title>Add Students</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav nav-panel">
+                <div class="logo">
+                    <h4>People<span>Cert<span>&reg;</span></span></h4>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="student.html">Add a Student</a>
+                    </li>
+                    <li>
+                        <a href="teachers.html">Add a Teacher</a>
+                    </li>
+                    
+                    <li>
+                        <a href="course.html">Add a lesson</a>
+                    </li>
+                    <li>
+                        <a href="assigment.html">Add an Assigment</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <a class="logout-btn" href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <section class="panel-section_forms">
+        <div class="form_container">   
+            <h1 class="form-header">Add a Student:</h1>
+            <!-- <button class="btn-add">Add a New Student</button> -->
+            <form id="add_students">
+                <div class="form-grid">
+                    <div class="input-box">
+                        <span id="form_header_name" class="input-box-details">Full Name:</span>
+                        <input type="text" placeholder="Ex. Giannis Chioutakos" id="name" required>
+                    </div>
+                    <div class="input-box">
+                        <span id="form_header_address" class="input-box-details">Address:</span>
+                        <input type="text" placeholder="Ex. Ermou 34" id="address" required>
+                    </div>
+                    <div class="input-box">
+                        <span id="form_header_email" class="input-box-details">Email:</span>
+                        <input type="email" placeholder="Ex. studentemail@gmail.com" id="email" required>
+                    </div>
+                    <div class="input-box">
+                        <span id="form_header_phone" class="input-box-details">Phone Number</span>
+                        <input type="tel" placeholder="Ex. 6944560845" id="phone" required>
+                    </div>
+                    <!-- <div class="input-box input-box-full-size">
+                        <span class="input-box-details">full size test</span>
+                        <input type="tel" placeholder="Enter your number" required>
+                    </div> -->
+                </div> <!--End user-details -->
+                <div class="input-box_select">
+                    <span class="input-box-details">Class Enrolled</span>
+                    <select name="courses" id="courses">
+                        <option value="Javascript">Javascript</option>
+                        <option value="Csharp">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="Devops">DevOps</option>
+                    </select>
+                </div>
+                <div class="input-box_radio">
+                    <span class="input-box-details">Course course-length</span>
+                    <label>
+                        <input type="radio" name="course-length" id="part-time" value="part-time" checked>
+                        <span>Part Time</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="course-length" id="full-time" value="full-time">
+                        <span>Full Time</span>
+                    </label>
+                </div> 
+                <!-- button -->
+                <input type="submit" value="Add Student" class="form-btn" id="form-button">
+            </form>
+              
+        
+        
+        </div>
+    </section>
+    <section class="section-table">
+        <table class="table-list" id="student-list">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>class</th>
+                    <th>Course Length</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-list-row">
+                    <td>Giannis Chioutakos</td>
+                    <td>Ermoupoleos</td>
+                    <td>giannis.chiout@gmail.com</td>
+                    <td></td>
+                    <td>javascript</td>
+                    <td>Part-Time</td>
+                    <td>
+                        <button class="edit-btn btn-table">Edit</button>
+                        <button class="delete-btn btn-table" onClick="deleteRow(this)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>       
+        </table> 
+    </section> 
+    <section>
+        <table class="list" id="studentlist">
+            <thead>
+                <tr>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>Chioutakos</td>
+                    <td>Ermoupoleos</td>
+                    <td>Ermoupoleos</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+          
+ <script src="students.js"></script>       
+</body>
+</html>
+
+
