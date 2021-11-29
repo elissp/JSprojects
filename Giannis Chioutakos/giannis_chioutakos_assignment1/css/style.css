@@ -186,7 +186,7 @@ section.hero > * {
 }
 
  .hero-image {
-    background-image: url("imgs/card-image1.jpg);
+    background-image: url("../imgs/card-image1.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
