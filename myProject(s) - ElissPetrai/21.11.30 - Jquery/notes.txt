@@ -82,3 +82,17 @@ Basic Events
         mouseLeave()
         on("eventName",function(){/* Your Code */})
         click()
+
+Multiple Events Handler
+    $("p").on(
+        {
+                mouseenter:function(){
+                    console.log("The curson touched the paragraph");
+                },
+                mouseleave:function(){
+                    console.log("The cursor left the paragraph);
+                },
+                click:function(){
+                    console.log("The cursor clicked the paragraph");
+                }
+        });
