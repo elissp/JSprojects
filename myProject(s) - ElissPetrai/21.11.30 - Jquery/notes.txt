@@ -103,3 +103,4 @@ Animations
         animate()
         hide(speed)
         show(speed)
+        
