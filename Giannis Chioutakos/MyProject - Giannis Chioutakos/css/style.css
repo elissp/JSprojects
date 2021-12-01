@@ -355,10 +355,8 @@ section#about .about-wrapper {
     width: 200px;
     border-radius: 5px;
     margin: 15px;
-    z-index: 1;
-
 }
-
+/*
 #my-image::before {
     content: "";
     position: absolute;
@@ -384,7 +382,7 @@ section#about .about-wrapper {
     border-radius: 5px;
 
 }
-
+*/
 section#about .about-wrapper p {
     text-align: justify;
     width: 600px;
