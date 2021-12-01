@@ -51,7 +51,7 @@ The basic selectors
             $("*")
 
 jQuery and CSS selectors
-    Have the exact same logic
+    have the exact same logic
         i.e.    
             $("ul li")
 
@@ -62,12 +62,12 @@ Preventing the default behavior of event
             })
 
 Alternative syntax 
-        instead of 
+        instead of: 
             $(document).ready(function(){
                 alert("Hello")
             });
 
-        you can write this (exact the same)
+        you can write this (exact the same):
             $(document).ready(() => {
                 alert("Hello");
             })
@@ -103,4 +103,40 @@ Animations
         animate()
         hide(speed)
         show(speed)
-        
+    
+Basic Functions 
+        text()
+        html()
+        val()
+        attr()
+        append()
+        prepend()
+        after()
+        before()
+        empty()
+        addClass()
+        removeClass()
+        toggleClass()
+        css()
+
+15. Dimensions
+        width()
+        height()
+        innerWidth()
+        innerHeight()
+        outerWidth()
+        outerHeight()
+
+16. DOM Traversing
+        parent()
+        parents()
+        parentsUntil()
+        childer()
+        find()
+        simbling()
+        next()
+        nextUntil()
+        prev()
+        prevUntil()
+        closest()
+        wrap()
