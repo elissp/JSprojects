@@ -356,8 +356,8 @@ section#about .about-wrapper {
     border-radius: 5px;
     margin: 15px;
 }
-/*
-#my-image::before {
+
+ /* #my-image::before {
     content: "";
     position: absolute;
     width: 200px;
@@ -367,9 +367,9 @@ section#about .about-wrapper {
     top: -10px;
     right: -10px;
     z-index: -1;
-    border-radius: 5px;
-}
-#my-image::after {
+    border-radius: 5px; 
+} */
+ /* #my-image::after {
     content: "";
     position: absolute;
     width: 200px;
@@ -381,8 +381,8 @@ section#about .about-wrapper {
     z-index: -2;
     border-radius: 5px;
 
-}
-*/
+} */
+
 section#about .about-wrapper p {
     text-align: justify;
     width: 600px;
