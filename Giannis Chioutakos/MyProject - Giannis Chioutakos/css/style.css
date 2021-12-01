@@ -355,6 +355,7 @@ section#about .about-wrapper {
     width: 200px;
     border-radius: 5px;
     margin: 15px;
+    z-index: 1;
 
 }
 
