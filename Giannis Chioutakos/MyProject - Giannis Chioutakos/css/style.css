@@ -357,7 +357,7 @@ section#about .about-wrapper {
     margin: 15px;
 }
 
- /* #my-image::before {
+#my-image::before {
     content: "";
     position: absolute;
     width: 200px;
@@ -366,10 +366,10 @@ section#about .about-wrapper {
     border: 1px solid var(--details-font-color);
     top: -10px;
     right: -10px;
-    z-index: -1;
+    z-index: -2;
     border-radius: 5px; 
-} */
- /* #my-image::after {
+} 
+  #my-image::after {
     content: "";
     position: absolute;
     width: 200px;
@@ -378,10 +378,10 @@ section#about .about-wrapper {
     border: 1px solid var(--details-font-color);
     top: -20px;
     right: -20px;
-    z-index: -2;
+    z-index: -3;
     border-radius: 5px;
 
-} */
+}
 
 section#about .about-wrapper p {
     text-align: justify;
@@ -475,10 +475,3 @@ section#contact form .btn-form {
     font-size: 1.6rem;
     border-radius: 5px;
 }
-
-
-
-
-
-
-
