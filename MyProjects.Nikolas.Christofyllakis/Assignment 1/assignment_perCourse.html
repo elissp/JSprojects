@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment per Course Registration/Edit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="jumbotron text-center mystyle bg-dark">
+            <h1>People<span class="text-light">Cert</span>  Education</h1>
+        </header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark myStyleNavBar">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Students
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./student.html">Add/Edit Student</a>
+                      <a class="dropdown-item" href="./student_perCourse.html">Add/Edit Student per Course</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Trainers
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./trainer.html">Add/Edit Trainer</a>
+                      <a class="dropdown-item" href="./trainer_perCourse.html">Add/Edit Trainer per Course</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./course.html">Courses</a>   
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Assignments
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./assignment.html">Add/Edit Assignment</a>
+                            <a class="dropdown-item" href="./assignment_perCourse.html">Add/Edit Assignment per Course</a>
+                            <a class="dropdown-item" href="./assignment_perStudent_perCourse.html">Add/Edit Assignment per Student per Course</a>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-lg-12 well formStyle bg-info">
+            <div class="col-sm-12 text-center text-light">
+                <h2>Assignment per Course Registration/Edit</h2>
+            </div>
+            <form  style="margin-top: 5%;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 text-light">
+                            <label><strong>Course</strong></label>
+                        </div>
+                        <div class="col-sm-6 text-light">   
+                            <select id="course" name="course">
+                                <option value="" disabled="disabled" selected="selected">Please Select a Course</option>
+                                <option value="java">Java</option>
+                                <option value="c">C#</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="sql">Sql</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <div class="row" id="assignmentRow" style="margin-top: 5%;">
+                        <div class="col-sm-6 text-light">
+                            <label><strong>Assignment</strong></label>
+                        </div>
+                        <div class="col-sm-6">   
+                            <select id="assignmentSelect" name="assignmentSelect">
+                                <option value="" disabled="disabled" selected="selected">Please Select an Assignment</option>
+                                <option value="addAssignment">+ Add an Assignment</option>
+                                <option value="assignment1">Assignment 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>    
+            </form>
+            <form id="formAssignmentAdd" style="margin-top: 5%;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Assignment Title*</label>
+                            <input type="text" id="assignmentTitle" name="assignmentTitle" placeholder="Enter Assignment Name Here..." class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Assignment Assigned Date*</label>
+                            <input type="date" name="startDate" id="startDate" class="form-control" min="2020-12-31" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Assignment Due date*</label>
+                            <input type="date" name="endDate" id="endDate" class="form-control" min="2020-12-31" required>
+                        </div>
+                    </div>					
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+                            <label>Oral Mark*</label>
+                            <input type="number" id="oralMark" placeholder="Enter Oral Mark Here.." class="form-control" min="0" max="10" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>Total Mark*</label>
+                            <input type="number" id="totalMark" placeholder="Enter Total Mark Here.." class="form-control" min="0" max="20" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>Max Mark*</label>
+                            <input type="number" id="maxMark" placeholder="Enter Max Mark Here.." class="form-control" min="0" max="20" required>
+                        </div>		
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Assignment Discription*</label>
+                            <textarea placeholder="Enter Description Here.." rows="30" class="form-control" required></textarea>
+                        </div>
+                    </div>                           
+                    <div class="row">   
+                        <div class="col-sm-12 alert alert-danger alert-dismissible">
+                            <label>*Required fields</label>
+                          </div>
+                    </div>
+                </div>	    
+                <div class="row">
+                    <div class="col-sm-6 form-group text-center">
+                    <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                    </div>
+                    <div class="col-sm-6 form-group text-center">
+                    <button type="reset" class="btn btn-lg btn-danger">Clear</button>
+                    </div>
+                </div>			
+            </form>
+            <form id="formAssignmentEdit" style="margin-top: 5%;" >
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Assignment Title*</label>
+                            <input type="text" id="assignmentTitle" name="assignmentTitle" value="Assignment 1" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Assignment Assigned Date*</label>
+                            <input type="date" name="startDate" id="startDate" class="form-control" min="2020-12-31" value="2021-08-10" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Assignment Due date*</label>
+                            <input type="date" name="endDate" id="endDate" class="form-control" min="2020-12-31" value="2021-09-10" required>
+                        </div>
+                    </div>					
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+                            <label>Oral Mark*</label>
+                            <input type="number" id="oralMark" value="30" class="form-control" min="0" max="10" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>Total Mark*</label>
+                            <input type="number" id="totalMark" value="66" class="form-control" min="0" max="20" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>Max Mark*</label>
+                            <input type="number" id="maxMark" value="100" class="form-control" min="0" max="20"required>
+                        </div>		
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Assignment Discription*</label>
+                            <textarea rows="30" class="form-control" required>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore quos, est sint qui facilis. Tempora odio, placeat excepturi ad rerum voluptas quidem, quod facilis quaerat veniam provident! Officiis, ab est voluptatum dicta itaque, cupiditate similique, accusamus magni dolorum illum consequatur quasi quas laboriosam. Fugit aliquid nostrum pariatur commodi quod tenetur, animi iure molestiae itaque, aspernatur perspiciatis. Quas velit aut est nobis earum consectetur temporibus minus expedita incidunt veniam? Molestias doloremque, quibusdam delectus deleniti quisquam reiciendis incidunt in accusamus ab nobis, velit beatae hic quasi repellat provident laboriosam sequi et cupiditate unde odit ea debitis fuga? Quo asperiores dicta veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsa quis in debitis explicabo. Excepturi ipsa qui optio laudantium repudiandae magni modi, porro earum doloribus unde nobis a. Qui, blandLorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsa quis in debitis explicabo. Excepturi ipsa qui optio laudantium repudiandae magni modi, porro earum doloribus unde nobis a. Qui, blanditiis.itiis.</textarea>
+                        </div>
+                    </div>                           
+                    <div class="row">   
+                        <div class="col-sm-12 alert alert-danger alert-dismissible">
+                            <label>*Required fields</label>
+                          </div>
+                    </div>
+                </div>	    
+                <div class="row">
+                    <div class="col-sm-6 form-group text-center">
+                    <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                    </div>
+                    <div class="col-sm-6 form-group text-center">
+                    <button type="reset" class="btn btn-lg btn-danger">Clear</button>
+                    </div>
+                </div>			
+            </form>
+    </div>
+</div>
+</div>
+</body>
+</html>

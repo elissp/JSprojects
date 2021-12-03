@@ -1,0 +1,78 @@
+@import "font-awesome.min.css";
+@import "font-awesome-ie7.min.css";
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url(../img/9iapSjX.png);
+  background-size: cover;
+  object-fit: cover;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.mystyle h1{
+  font-size: 50px;
+  color: crimson;
+}
+h2{
+  margin-bottom: 5%;
+}
+.formStyle{
+  
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+}
+.myStyleNavBar{
+  border-radius: 0.3em;
+  color: white;
+}

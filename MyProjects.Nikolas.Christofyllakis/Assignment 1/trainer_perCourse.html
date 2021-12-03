@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer per Course Registration/Edit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="jumbotron text-center mystyle bg-dark">
+            <h1>People<span class="text-light">Cert</span>  Education</h1>
+        </header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark myStyleNavBar">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Students
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./student.html">Add/Edit Student</a>
+                      <a class="dropdown-item" href="./student_perCourse.html">Add/Edit Student per Course</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Trainers
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./trainer.html">Add/Edit Trainer</a>
+                      <a class="dropdown-item" href="./trainer_perCourse.html">Add/Edit Trainer per Course</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./course.html">Courses</a>   
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Assignments
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./assignment.html">Add/Edit Assignment</a>
+                            <a class="dropdown-item" href="./assignment_perCourse.html">Add/Edit Assignment per Course</a>
+                            <a class="dropdown-item" href="./assignment_perStudent_perCourse.html">Add/Edit Assignment per Student per Course</a>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-lg-12 well formStyle bg-info">
+            <div class="col-sm-12 text-center text-light">
+                <h2>Trainer per Course Registration/Edit</h2>
+            </div>
+            <form  style="margin-top: 5%;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 text-light">
+                            <label><strong>Course</strong></label>
+                        </div>
+                        <div class="col-sm-6">   
+                            <select id="course" name="course">
+                                <option value="" disabled="disabled" selected="selected">Please Select a Course</option>
+                                <option value="javascript">Java</option>
+                                <option value="c">C#</option>
+                                <option value="java">JavaScript</option>
+                                <option value="sql">Sql</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <div class="row" id="trainerRow" style="margin-top: 5%;">
+                        <div class="col-sm-6 text-light">
+                            <label><strong>Trainer</strong></label>
+                        </div>
+                        <div class="col-sm-6">   
+                            <select id="trainerSelect" name="trainerSelect">
+                                <option value="" disabled="disabled" selected="selected">Please Select a Trainer</option>
+                                <option value="addTrainer">+ Add a Trainer</option>
+                                <option value="SarahParker">Anna Vissi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>    
+            </form>
+            <form id="formTrainerAdd" style="margin-top: 5%;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name*</label>
+                            <input type="text" id="firstname" placeholder="Enter First Name Here.." class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name*</label>
+                            <input type="text" id="lastname" placeholder="Enter Last Name Here.." class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Birthdate*</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" min="1930-12-31" max="2010-12-31" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Gender*</label></br>
+                            <input type="radio" id="male" name="gender" value="male" style="margin-top: 5%;" required> Male    
+                            <input type="radio" id="female" name="gender" value="female" style="margin-left: 10%;"> Female
+                        </div>
+                    </div>					
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+                            <label>City*</label>
+                            <input type="text" placeholder="Enter City Name Here.." class="form-control" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>State*</label>
+                            <input type="text" placeholder="Enter State Name Here.." class="form-control" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>Zip Code*</label>
+                            <input type="text" placeholder="Enter Zip Code Here.." class="form-control" maxlength="5" required>
+                        </div>		
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Address*</label>
+                            <textarea placeholder="Enter Address Here.." rows="3" class="form-control" required></textarea>
+                        </div>
+                    </div>	
+                    <div class="row">					
+                        <div class="col-sm-6 form-group">
+                            <label>Phone Number*</label>
+                            <input type="tel" placeholder="Enter Phone Number Here.." class="form-control" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Main Subject*</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter Main Subject Here.." class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">		
+                        <div class="col-sm-6 form-group">
+                            <label>Email Address*</label>
+                            <input type="email" placeholder="Enter Email Address Here.." class="form-control" required>
+                        </div>    	
+                        <div class="col-sm-6 form-group">
+                            <label>Website</label>
+                            <input type="url" placeholder="Enter Website Name Here.." class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Title</label>
+                            <input type="text" placeholder="Enter Designation Here.." class="form-control">
+                        </div>		
+                        <div class="col-sm-6 form-group">
+                            <label>Works At</label>
+                            <input type="text" placeholder="Enter Company Name Here.." class="form-control">
+                        </div>	
+                    </div>
+                    <div class="row">   
+                        <div class="col-sm-12 alert alert-danger alert-dismissible">
+                            <label>*Required fields</label>
+                          </div>
+                    </div>	    
+                    <div class="row">
+                        <div class="col-sm-6 form-group text-center">
+                        <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                        </div>
+                        <div class="col-sm-6 form-group text-center">
+                        <button type="reset" class="btn btn-lg btn-danger">Clear</button>
+                        </div>
+                    </div>
+                </div>				
+            </form>
+            <form id="formTrainerEdit" style="margin-top: 5%;" >
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>First Name*</label>
+                            <input type="text" id="firstname" value="Anna" class="form-control" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Last Name*</label>
+                            <input type="text" id="lastname" value="Vissi" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Birthdate*</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" value="1998-11-12" min="1930-12-31" max="2010-12-31" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Gender*</label></br>
+                            <input type="radio" id="male" name="gender" value="male" style="margin-top: 5%;" required> Male    
+                            <input type="radio" id="female" name="gender" value="female" style="margin-left: 10%;" checked> Female
+                        </div>
+                    </div>					
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+                            <label>City*</label>
+                            <input type="text" value="Creta" class="form-control" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>State*</label>
+                            <input type="text" value="Heraclion" class="form-control" required>
+                        </div>	
+                        <div class="col-sm-4 form-group">
+                            <label>Zip Code*</label>
+                            <input type="text" value="16544" class="form-control" maxlength="5" required>
+                        </div>		
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label>Address*</label>
+                            <textarea id="address" rows="3" class="form-control" required>Tsouderon 43,Palia Porta</textarea>
+                        </div>
+                    </div>	
+                    <div class="row">					
+                        <div class="col-sm-6 form-group">
+                            <label>Phone Number*</label>
+                            <input type="tel" value="6995434222" class="form-control" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label>Main Subject*</label>
+                            <input type="text" id="subject" name="subject" value="Javascript" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">		
+                        <div class="col-sm-6 form-group">
+                            <label>Email Address*</label>
+                            <input type="email" value="Anna_Vissi@yahoo.gr" class="form-control" required>
+                        </div>    	
+                        <div class="col-sm-6 form-group">
+                            <label>Website</label>
+                            <input type="url" value="https://www.AnnaVissi.com" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Title</label>
+                            <input type="text" value="Head Javascript Trainer" class="form-control">
+                        </div>		
+                        <div class="col-sm-6 form-group">
+                            <label>Works At</label>
+                            <input type="text" value="Google" class="form-control">
+                        </div>	
+                    </div>
+                    <div class="row">   
+                        <div class="col-sm-12 alert alert-danger alert-dismissible">
+                            <label>*Required fields</label>
+                          </div>
+                    </div>	    
+                    <div class="row">
+                        <div class="col-sm-6 form-group text-center">
+                        <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                        </div>
+                        <div class="col-sm-6 form-group text-center">
+                        <button type="reset" class="btn btn-lg btn-danger">Clear</button>
+                        </div>
+                    </div>				
+                </div>
+            </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
