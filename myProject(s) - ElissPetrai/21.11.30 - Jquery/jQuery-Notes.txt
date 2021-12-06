@@ -140,3 +140,10 @@ Basic Functions
         prevUntil()
         closest()
         wrap()
+
+Cheatsheet
+        https://www.oscarotero.com/jquery
+
+Practice
+        Sololearn jquery
+        freecodecamp
