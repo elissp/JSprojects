@@ -1,0 +1,15 @@
+section{
+    background-color: rgb(56, 54, 54);   
+}
+
+.card{
+    background-color: rgb(34,34,34);
+    border-color: rgb(75,75,75)!important;
+    border: solid 1px;
+}
+body{
+    background-color: rgb(56, 54, 54);
+}
+img{
+    max-width: 100px;
+}
