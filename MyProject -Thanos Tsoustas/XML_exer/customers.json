@@ -1,0 +1,20 @@
+[{
+    "id":1,
+    "name":"Thanos Ts",
+    "company":"Pixars",
+    "phone":"666-666-6666"
+},
+{
+    "id":2,
+    "name":"Thanos Tso",
+    "company":"Pixars",
+    "phone":"777-666-6666"
+},
+{
+    "id":3,
+    "name":"Thanos Tsa",
+    "company":"Pixars",
+    "phone":"888-666-6666"
+}
+
+]
