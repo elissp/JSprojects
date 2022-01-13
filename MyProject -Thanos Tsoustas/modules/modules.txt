@@ -1,0 +1,46 @@
+1. Es Modules (named & default) for browsers
+
+--- "import" => brings (read-only) functionality from one file to
+    another.
+	1a. Named import:
+	  i) import { name } from '....'
+
+	1b. Default import:
+	  i) import name from '....'
+
+	1c. Named & Default imports with aliases:
+	  i) import name1 as blabla1 from '....'
+	  ii) import { name2 as blabla2 } from '....'
+
+	1d. Import everything as on object with aliases:
+	  i) import * as name from '....'
+	  --- then -> name.import1, name.import2....
+	
+
+
+--- "export" => lets you use functionality from another file.
+	1a. Named export (several per module)
+	  i) export const name = .....
+	  ii) export {name1, name2, ....}
+	  iii) export { name1 as name5, name2, .... }
+
+	1b. Default export (one per module)
+	   i) export default const name = .....
+	  ii) export default name1 - at the end of the file
+
+
+--- <script !type="module"! src="js_file"/>
+
+
+
+
+
+2. CommonJS Modules for Node.js
+
+--- require => create a variable from the imported functionality
+	2a) const name = require('...')
+
+--- module.exports => exports functionality
+	2a) module.exports = variable / {} / []
+
+
